@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Устанавливает кодировку документа -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--описывает метатег для управления масштабированием и отображением сайта на мобильных устройствах-->
+    <link rel="icon" type="image/png" href="img/icomT1.png"> <!-- Устанавливает иконку сайта -->
+    <title>Otter Web</title> <!-- Устанавливает заголовок страницы -->
+    <link rel="stylesheet" type="text/css" href="ostyle.css"> <!-- Подключает CSS-файл -->
+    <script src="oscript.js"></script> <!-- Подключает JavaScript-файл -->
+    <script src="../phaser/phaser.min.js"></script> <!-- Подключает библиотеку Phaser -->
+    <script src="../snakegame/game.js"></script> <!-- Подключает файл со скриптом игры -->
+    <style>
+        #menu { /* Стили для блока меню */
+            position: relative;
+            z-index: 1000;
+        }
+
+        #menu:hover .submenu { /* Стили для выпадающего меню, которое появляется при наведении на блок меню */
+            max-height: 200px;
+            transition: max-height 1s;
+        }
+
+        .submenu { /* Стили для выпадающего меню */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            max-height: 0;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: max-height 1s;
+            padding: 0;
+        }
+
+        .submenu li { /* Стили для элементов выпадающего меню */
+            display: none;
+        }
+
+        .submenu li:not(:empty) { /* Стили для непустых элементов выпадающего меню */
+            display: block;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div id="menu">
+        <a href="#" class="menu-title">Menu</a>
+        <ul class="submenu" >
+            <li><a href="../FishPage/fishpagehtml.html" target="_blank">About Fish</a></li>
+            <li><a href="https://dzen.ru/a/W7hvkPQlJA8LFn7f" target="_blank">Food</a></li>
+            <li><a href="https://stopgame.ru/" target="_blank">Games</a></li>
+            <li><a href="https://www.figma.com/community/file/769694576496801916/%E2%9A%94%EF%B8%8F-Figma-Ninja---Speed-up-your-Figma-skills" target="_blank">Cat Room</a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</header>
+<div id="game-container">
+    <canvas id="game-board"></canvas>
+    <div id="scoreboard">Score: 0</div>
+</div>
+<footer>
+    <div class="whatsapp-link">
+        <a href="https://api.whatsapp.com/send?phone=79685178968" target="_blank">Otters' WhatsApp</a>
+        <div class="qr-code"></div>
+    </div>
+</footer>
+<script src="oscript.js"></script>
+</body>
+</html>
